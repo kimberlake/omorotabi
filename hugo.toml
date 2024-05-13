@@ -1,0 +1,4 @@
+baseURL = 'https://omorotabi.com/'
+languageCode = 'en-us'
+title = 'Omorotabi'
+theme = 'omorotabi'
