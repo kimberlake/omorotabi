@@ -1,3 +1,10 @@
+
+
+form.banner-form__wrapper:focus-within {
+
+    box-shadow: 0px 0px 9px 6px #ff5956 !important;
+  }
+
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -4600,7 +4607,7 @@ path {
   opacity: 1;
 }
 .banner-form__popup__checkbox li input[type=checkbox]:checked + label span {
-  background-color: var(--trevlo-base, #FF5956);
+  background-color: var(--trevlo-base, #ff5956);
   border-color: var(--trevlo-base, #FF5956);
 }
 .banner-form--two {

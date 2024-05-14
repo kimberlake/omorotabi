@@ -63,7 +63,7 @@
 			<div class="col-lg-7 col-xl-4 wow animated fadeInUp" data-wow-delay="0.7s" data-wow-duration="1500ms">
 				<div class="footer-widget footer-widget--newsletter">
 					<h2 class="footer-widget__title">Naujienraštis</h2><!-- /.footer-widget__title -->
-					<form name="newsletter" class="footer-widget__newsletter-form" netlify>
+					<form name="newsletter" class="footer-widget__newsletter-form" netlify netlify-honeypot>
 						<input type="email" name="emailAddress" id="footer-widget__newsletter-input" placeholder="Email Address" class="footer-widget__newsletter-input" required="true">
 						<button type="submit" class="footer-widget__newsletter-btn trevlo-btn trevlo-btn--base-three"><span>Prenumeruoti</span></button>
 					</form><!-- /.footer-widget__newsletter-form -->
@@ -130,7 +130,7 @@
 <!-- /.mobile-nav__content -->
 </div>
 <!-- /.mobile-nav__wrapper -->
-<div class="search-popup">
+{{/*  <div class="search-popup">
 <div class="search-popup__overlay search-toggler"></div>
 <!-- /.search-popup__overlay -->
 <div class="search-popup__content">
@@ -141,7 +141,16 @@
 		</button>
 	</form>
 </div>
-<!-- /.search-popup__content -->
+<!-- /.search-popup__content -->  */}}
+
+<div class="search-popup">
+	<div class="search-popup__overlay search-toggler"></div>
+	<!-- /.search-popup__overlay -->
+	<div class="search-popup__content">
+		Jusu uzklausa priimta
+	</div>
+	<!-- /.search-popup__content -->
+
 </div>
 <!-- /.search-popup -->
 
@@ -198,4 +207,14 @@
 	  document
 		.querySelector("form")
 		.addEventListener("submit", handleSubmit);
+	</script>
+
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCHML8SSZ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCHML8SSZ9');
 </script>
