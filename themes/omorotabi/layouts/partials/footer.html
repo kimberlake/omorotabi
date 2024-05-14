@@ -218,3 +218,29 @@
 
   gtag('config', 'G-VCHML8SSZ9');
 </script>
+
+<script>
+// -- Google Analytics tracking snippet here --
+// ...
+// ga('send', 'pageview');
+
+/**********************************************************************
+ * add the following code after the Google Analytics tracking snippet *
+ **********************************************************************/
+
+// remove utm_* query parameters
+ga(function() {
+	function paramIsNotUtm(param) { return param.slice(0, 4) !== 'utm_'; }
+	if (history && history.replaceState && location.search) {
+	  var params = location.search.slice(1).split('&');
+	  var newParams = params.filter(paramIsNotUtm);
+	  if (newParams.length < params.length) {
+		var search = newParams.length ? '?' + newParams.join('&') : '';
+		var url = location.pathname + search + location.hash;
+		history.replaceState(null, null, url);
+	  }
+	}
+  });
+  
+
+</script>
